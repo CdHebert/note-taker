@@ -28,10 +28,21 @@ router.delete('/notes/:id', (req, res) => {
   })
   fs.writeFile('./db/db.json', JSON.stringify(keptNotes), (err, data) => {
     if (err) throw err
-    res.json(keptNotes);
+   
   });
-
+  res.json(keptNotes);
+  console.log(notes)
+  console.log(keptNotes)
 });
+// router.delete('/notes/:id', (req, res) => {
+//   const id = req.params.id;
+//   const keptNotes = notes.filter((note) => {
+//     return note.id !== id;
+//   });
+//   const keptJson = JSON.stringify(keptNotes);
+//   fs.writeFileSync('./db/db.json', keptJson, (err))
+// });
+
 
 
 module.exports = router;
