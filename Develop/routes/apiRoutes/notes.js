@@ -31,8 +31,7 @@ router.delete('/notes/:id', (req, res) => {
    
   });
   res.json(keptNotes);
-  console.log(notes)
-  console.log(keptNotes)
+
 });
 // router.delete('/notes/:id', (req, res) => {
 //   const id = req.params.id;
